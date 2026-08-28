@@ -26,7 +26,6 @@ export function buildBrandedContactEmail(input: ContactEmailInput) {
     timeStyle: "short",
     timeZone: "America/Toronto",
   }).format(new Date());
-  const replySubject = encodeURIComponent(`Re: ${subject || topic}`);
 
   const html = `<!doctype html>
 <html lang="en">
@@ -46,9 +45,6 @@ export function buildBrandedContactEmail(input: ContactEmailInput) {
             <a href="mailto:${escapeHtml(email)}" style="color:#52605a;text-decoration:none">${escapeHtml(email)}</a>
             ${phone ? `<span style="padding:0 7px;color:#b0b7b3">&middot;</span><span>${escapeHtml(phone)}</span>` : ""}
           </div>
-        </td></tr>
-        <tr><td align="center" style="padding:18px 32px 30px">
-          <a href="mailto:${escapeHtml(email)}?subject=${replySubject}" style="display:inline-block;padding:12px 20px;background:#2f8f5f;border-radius:999px;color:#ffffff;font-size:13px;font-weight:700;text-decoration:none">Reply to ${escapeHtml(name)}</a>
         </td></tr>
         <tr><td align="center" style="padding:24px 32px 28px">
           <img src="https://365loan.ca/logo.svg" width="96" alt="365loan" style="display:block;width:96px;max-width:100%;height:auto;margin:0 auto;border:0">
