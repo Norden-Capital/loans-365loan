@@ -3,9 +3,9 @@ import Script from "next/script";
 import { ArrowUpRight, Banknote, Target, Gauge, Layers, MapPin, CalendarClock, List, Percent, Users, Clock, MoveHorizontal } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { cn } from "@/lib/utils";
-import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Browse Personal Loans in Canada by Amount, Type & More | 365loan",
   description: "Find the right personal loan for you — browse by amount, purpose, credit score, type, term, or location across 365loan's Canadian lender network.",
   path: "/loans",

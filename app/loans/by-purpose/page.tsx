@@ -3,10 +3,10 @@ import Script from "next/script";
 import { ArrowUpRight, Target } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { LOAN_PURPOSES } from "@/lib/loans/purposes";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Personal Loans by Purpose | 365loan",
   description: "Compare personal loans in Canada by purpose — debt consolidation, home improvement, medical bills, car repairs, and more. Find the guide that matches your need.",
   path: "/loans/by-purpose",

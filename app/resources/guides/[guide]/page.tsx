@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { GUIDES, GUIDE_CATEGORY_LABELS, getGuide } from "@/lib/guides";
 import { GENERIC_LOAN_FAQS } from "@/lib/loans/content";
 
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const guide = getGuide(slug);
   if (!guide) return {};
 
-  return buildMetadata({
+  return pageMetadata({
     title: `${guide.title} | 365loan`,
     description: guide.description,
     path: `/resources/guides/${guide.slug}`,

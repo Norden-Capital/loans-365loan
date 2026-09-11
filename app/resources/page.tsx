@@ -3,9 +3,9 @@ import Script from "next/script";
 import { ArrowUpRight, Wrench, ArrowRightLeft, BookOpen, HelpCircle, FolderTree, Sparkles, RefreshCw, MoveHorizontal } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { cn } from "@/lib/utils";
-import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Loan Resources: Guides, Tools & Comparisons | 365loan",
   description: "Guides, tools, and comparisons to help you borrow smarter — from calculators to answers on credit scores, rates, and the loan process.",
   path: "/resources",

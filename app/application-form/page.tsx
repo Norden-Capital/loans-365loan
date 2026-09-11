@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import Script from "next/script";
 import { ApplyForm } from "@/components/application-form/application-form";
-import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Apply for a Personal Loan Online | 365loan Canada",
   description: "Start your loan application with 365loan. Compare offers from vetted Canadian lenders and get matched with your best rate in minutes.",
   path: "/application-form",

@@ -4,9 +4,9 @@ import Image from "next/image";
 import { ShieldCheck, Lock, Zap, Users, Eye, Scale, Headphones } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { cn } from "@/lib/utils";
-import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "About 365loan | Canada's Personal Loan Comparison Platform",
   description: "Learn how 365loan connects Canadians with vetted lenders to find better personal loan rates — fast, transparent, and free to use.",
   path: "/aboutus",

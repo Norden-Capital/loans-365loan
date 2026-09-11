@@ -3,10 +3,10 @@ import Script from "next/script";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { PROVINCES } from "@/lib/loans/locations";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Personal Loans by Province & Territory | 365loan",
   description: "Compare personal loans across every Canadian province and territory. Find local lending regulations, community coverage, and how to apply near you.",
   path: "/loans/by-location",

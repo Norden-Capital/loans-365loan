@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, ArrowUpRight, Scale } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { COMPARISONS, getComparison } from "@/lib/loans/comparisons";
 import { GENERIC_LOAN_FAQS, SOURCES } from "@/lib/loans/content";
 
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const comparison = getComparison(slug);
   if (!comparison) return {};
 
-  return buildMetadata({
+  return pageMetadata({
     title: `${comparison.title} | 365loan`,
     description: comparison.description,
     path: `/resources/comparisons/${comparison.slug}`,

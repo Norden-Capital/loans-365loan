@@ -5,7 +5,7 @@ import { CheckCircle2, XCircle, ClipboardList, SlidersHorizontal, Banknote, Arro
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
 import { RelatedClusters } from "@/components/loans/related-clusters";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { LOAN_AMOUNTS, getLoanAmount, TERM_OPTIONS } from "@/lib/loans/amounts";
 import { buildRepaymentExamples } from "@/lib/loans/repayment";
 import { ELIGIBILITY, PROS, SOURCES, GENERIC_LOAN_FAQS } from "@/lib/loans/content";
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const amount = getLoanAmount(slug);
   if (!amount) return {};
 
-  return buildMetadata({
+  return pageMetadata({
     title: `${amount.display} Loan in Canada — Rates, Terms & How to Apply | 365loan`,
     description: `Thinking about a ${amount.display} loan in Canada? Compare real repayment examples, eligibility requirements, and alternatives from vetted lenders before you apply.`,
     path: `/loans/by-amount/${amount.slug}`,

@@ -3,10 +3,10 @@ import Script from "next/script";
 import { ArrowUpRight, Banknote } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { LOAN_AMOUNTS } from "@/lib/loans/amounts";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Personal Loans by Amount | 365loan",
   description: "Compare personal loans in Canada by amount — from $300 short-term loans to $5,000 installment loans. Find the size that fits your budget.",
   path: "/loans/by-amount",

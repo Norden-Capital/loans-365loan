@@ -3,10 +3,10 @@ import Script from "next/script";
 import { ArrowUpRight, Layers } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { LOAN_TYPES } from "@/lib/loans/types";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Browse Loan Types | 365loan",
   description: "Compare personal loan types in Canada — bad credit, debt consolidation, emergency, self-employed, newcomer, senior, and same-day loans, all in one place.",
   path: "/loans/by-type",

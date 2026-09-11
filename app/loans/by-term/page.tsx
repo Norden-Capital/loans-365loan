@@ -3,10 +3,10 @@ import Script from "next/script";
 import { ArrowUpRight, CalendarClock } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { REPAYMENT_TERMS } from "@/lib/loans/terms";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Personal Loans by Repayment Term | 365loan",
   description: "Compare personal loans in Canada by repayment term, from 3 to 60 months. See real monthly payment and total cost examples for each term length.",
   path: "/loans/by-term",

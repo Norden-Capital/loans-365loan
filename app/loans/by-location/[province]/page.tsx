@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, Landmark, ClipboardList, SlidersHorizontal, Banknote, ArrowUpRight, MapPin } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { PROVINCES, getProvince } from "@/lib/loans/locations";
 import { ELIGIBILITY, LOCATION_ADVANTAGES, LOCATION_SOURCES, GENERIC_LOAN_FAQS } from "@/lib/loans/content";
 
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const province = getProvince(slug);
   if (!province) return {};
 
-  return buildMetadata({
+  return pageMetadata({
     title: `Personal Loans in ${province.name} | 365loan`,
     description: `Compare personal loan lenders serving ${province.communityCount} communities in ${province.name}, including ${province.majorCities.slice(0, 2).join(" and ")}. Fast online approval, $300-$5,000.`,
     path: `/loans/by-location/${province.slug}`,

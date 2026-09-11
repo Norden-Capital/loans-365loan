@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, AlertCircle, ClipboardList, SlidersHorizontal, Banknote, ArrowUpRight } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { LOAN_PURPOSES, getLoanPurpose } from "@/lib/loans/purposes";
 import { getLoanAmount } from "@/lib/loans/amounts";
 import { ELIGIBILITY, PROS, SOURCES, GENERIC_LOAN_FAQS } from "@/lib/loans/content";
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const purpose = getLoanPurpose(slug);
   if (!purpose) return {};
 
-  return buildMetadata({
+  return pageMetadata({
     title: `${purpose.title} Loans in Canada | 365loan`,
     description: purpose.description,
     path: `/loans/by-purpose/${purpose.slug}`,

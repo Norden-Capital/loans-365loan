@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, AlertCircle, ClipboardList, SlidersHorizontal, Banknote, ArrowUpRight } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { REPAYMENT_TERMS, getRepaymentTerm } from "@/lib/loans/terms";
 import { LOAN_AMOUNTS } from "@/lib/loans/amounts";
 import { buildRepaymentByAmount } from "@/lib/loans/repayment";
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const term = getRepaymentTerm(slug);
   if (!term) return {};
 
-  return buildMetadata({
+  return pageMetadata({
     title: `${term.months}-Month Loans in Canada | 365loan`,
     description: `Compare ${term.months}-month personal loan terms in Canada. See real monthly payment and total cost examples before you apply.`,
     path: `/loans/by-term/${term.slug}`,

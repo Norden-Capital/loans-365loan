@@ -3,10 +3,10 @@ import Script from "next/script";
 import { ArrowUpRight, ArrowRightLeft } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { COMPARISONS } from "@/lib/loans/comparisons";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Loan Comparisons | 365loan",
   description: "Side-by-side comparisons to help you choose the right way to borrow — personal loans vs credit cards, payday loans, lines of credit, and more.",
   path: "/resources/comparisons",

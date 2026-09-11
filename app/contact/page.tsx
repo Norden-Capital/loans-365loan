@@ -4,9 +4,9 @@ import Image from "next/image";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { ContactForm } from "@/components/contact/contact-form";
 import { CtaSection } from "@/components/landing/cta-section";
-import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Contact 365loan | Canadian Personal Loan Support Team",
   description: "Get in touch with the 365loan team — questions about rates, lenders, or your application, we usually respond within one business day.",
   path: "/contact",

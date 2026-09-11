@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Terms of Use | 365loan",
   description: "The terms and conditions governing your use of 365loan's Canadian personal loan comparison platform, including electronic agreements and dispute resolution.",
   path: "/terms-of-use",

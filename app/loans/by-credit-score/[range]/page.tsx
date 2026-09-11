@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, TrendingUp, ClipboardList, SlidersHorizontal, Banknote, ArrowUpRight } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { CREDIT_SCORE_RANGES, getCreditScoreRange } from "@/lib/loans/credit-scores";
 import { ELIGIBILITY, CREDIT_SCORE_SOURCES, GENERIC_LOAN_FAQS } from "@/lib/loans/content";
 import { RelatedClusters } from "@/components/loans/related-clusters";
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const range = getCreditScoreRange(slug);
   if (!range) return {};
 
-  return buildMetadata({
+  return pageMetadata({
     title: `Credit Score ${range.rangeLabel} Loans in Canada | 365loan`,
     description: range.metaDescription,
     path: `/loans/by-credit-score/${range.slug}`,

@@ -3,10 +3,10 @@ import Script from "next/script";
 import { ArrowUpRight, Gauge } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { CREDIT_SCORE_RANGES } from "@/lib/loans/credit-scores";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Personal Loans by Credit Score | 365loan",
   description: "Compare personal loans in Canada by credit score — from 300 to 900. Find realistic rates, approval odds, and lenders matched to your credit range.",
   path: "/loans/by-credit-score",

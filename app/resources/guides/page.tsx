@@ -3,10 +3,10 @@ import Script from "next/script";
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { GUIDES, GUIDE_CATEGORY_LABELS, type GuideCategory } from "@/lib/guides";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Loan Guides | 365loan",
   description: "In-depth guides on personal loans in Canada — eligibility, credit, provincial regulations, and step-by-step help for every borrowing situation.",
   path: "/resources/guides",

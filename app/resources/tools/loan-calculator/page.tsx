@@ -4,9 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
 import { LoanCalculator } from "@/components/tools/loan-calculator";
-import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Personal Loan Calculator Canada | Monthly Payment Estimator | 365loan",
   description: "Calculate your estimated monthly payment, total interest, and total repayment for a personal loan in Canada. Adjust amount, term, and credit range.",
   path: "/resources/tools/loan-calculator",

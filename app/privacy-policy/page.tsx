@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Lock, ShieldCheck, Ban } from "lucide-react";
-import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy | 365loan",
   description: "Learn how 365loan collects, uses, and protects your personal information in compliance with Canadian privacy law (PIPEDA), and how our lender network handles your data.",
   path: "/privacy-policy",

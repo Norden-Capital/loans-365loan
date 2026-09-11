@@ -3,10 +3,10 @@ import Script from "next/script";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
 import { FaqAccordion } from "@/components/tools/faq-accordion";
 import { CtaSection } from "@/components/landing/cta-section";
-import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 import { FAQ_CATEGORIES } from "@/lib/faq";
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = pageMetadata({
   title: "Frequently Asked Questions | 365loan",
   description: "Answers to common questions about personal loans in Canada — eligibility, rates, application process, repayment, and more.",
   path: "/resources/faq",

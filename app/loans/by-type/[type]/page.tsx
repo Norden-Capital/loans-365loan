@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, AlertCircle, ClipboardList, SlidersHorizontal, Banknote, ArrowUpRight, Target, Gauge } from "lucide-react";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Breadcrumbs } from "@/components/loans/breadcrumbs";
-import { buildMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
+import { pageMetadata, breadcrumbJsonLd, BASE_URL } from "@/lib/seo";
 import { LOAN_TYPES, getLoanType } from "@/lib/loans/types";
 import { getLoanPurpose } from "@/lib/loans/purposes";
 import { GENERIC_LOAN_FAQS, SOURCES } from "@/lib/loans/content";
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const loanType = getLoanType(slug);
   if (!loanType) return {};
 
-  return buildMetadata({
+  return pageMetadata({
     title: `${loanType.title} in Canada | 365loan`,
     description: loanType.description,
     path: `/loans/by-type/${loanType.slug}`,
